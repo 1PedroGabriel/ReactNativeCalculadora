@@ -15,7 +15,6 @@ export default App;
 
 const estilos = StyleSheet.create({
     home: {
-        flex: 1,
         backgroundColor: '#BF60B9'
     }
 })

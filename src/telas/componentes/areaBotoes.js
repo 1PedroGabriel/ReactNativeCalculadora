@@ -12,8 +12,8 @@ export default function AreaBotoes(){
 const estilos = StyleSheet.create({
 
     area: {
-        backgroundColor: '#724A8C',
-        marginHorizontal: 25,
+        backgroundColor: '#5617B2',
+        
         height: 800,
         paddingTop: 50,
         

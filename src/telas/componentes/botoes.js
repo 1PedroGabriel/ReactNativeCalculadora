@@ -22,7 +22,7 @@ function Botoes() {
 
     }
 
-    const RenderBotoes = () => {
+    const RenderBotoesNumericos = () => {
         const botoes = [];
 
         for(let i = 0; i < 3; i++){
@@ -47,9 +47,27 @@ function Botoes() {
 
             </TouchableOpacity>
 
-             </View>)
+             </View>);
         }
 
+        botoes.push(<View>
+              <TouchableOpacity style={estilos.BotoesNumericos} key={0} onPress={() => Conta(0) } >
+
+        <Text style={estilos.Simbolos}>{0}</Text>
+
+        </TouchableOpacity>
+
+        </View>);
+       
+
+        return botoes;
+
+    }
+
+    const RenderBotoesOperadores = () => {
+        const botoes = [];
+
+        
         botoes.push(<View>
 
             <TouchableOpacity style={estilos.BotoesNumericos} key={13} onPress={() => setValor('') } >
@@ -91,14 +109,18 @@ function Botoes() {
 
         </View>)
 
-        return botoes;
+        return botoes
 
     }
 
     return <View>
-        <Text>{valor}</Text>
-        <View style={estilos.BotoesDisplay}>
-            <RenderBotoes style={estilos.Simbolos} />
+        <Text style={estilos.Simbolos}>{valor}</Text>
+        <View style={estilos.BotoesNumericosDisplay}>
+            <RenderBotoesNumericos style={estilos.Simbolos} />
+        </View>
+
+        <View style={estilos.BotoesOperadoresDisplay}>
+            <RenderBotoesOperadores style={estilos.Simbolos} />
         </View>
             
         </View>
@@ -114,23 +136,26 @@ const estilos = StyleSheet.create({
 
     BotoesNumericos: {
         
-        backgroundColor: '#000000',
+        backgroundColor: '#392240',
         width: 60,
         height: 60,
         marginHorizontal: 1,
         marginVertical: 1,
-        
-        
     
     },
 
-    BotoesDisplay: {
+    BotoesNumericosDisplay: {
         flexDirection: 'row',
     },
 
+    BotoesOperadoresDisplay: {
+        flexDirection: 'column',
+    },
+
     Simbolos: {
-        color: '#FFFFFF',
-        fontSize: 15,
+        color: '#F28D9F',
+        fontSize: 40,
+        flexDirection: 'column',
     }
 
 

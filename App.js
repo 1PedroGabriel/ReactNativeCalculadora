@@ -3,7 +3,7 @@ import { SafeAreaView, StyleSheet, Text } from "react-native";
 import Home from "./src/telas/home/index.js";
 
     function App(){
-        return <SafeAreaView>
+        return <SafeAreaView style={estilos.home} >
 
             <Home style={estilos.home}/>
         </SafeAreaView>
@@ -16,5 +16,6 @@ export default App;
 const estilos = StyleSheet.create({
     home: {
         flex: 1,
+        backgroundColor: '#BF60B9'
     }
 })
